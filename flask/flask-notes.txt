@@ -1,0 +1,7 @@
+Introduction:
+    1. Flask is a web application framework written in Python. It is developed by Armin Ronacher, who lean an   
+        international group of Python enthusiasts named Pocco. 
+    2. Flask is based on WSGI(web server gateway interface) toolkit and Jinja2 template engine.
+    3. WSGI is a standard/protocol to connect/interact in/with the web applications. It act as a medium between client and server.
+    4. Using Flask, we can develop end to end applications.
+    5. Flask is written in Python.
