@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello world!, you are at the polls index.")
+    return HttpResponse("<h1>Hello world!, you are at the polls index.</h1>")

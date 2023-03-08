@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from testapp import views
+from polls import views as view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', views.greet_func),
+    path('index/', view.index),
+    path('date/', views.display_date),
 ]
