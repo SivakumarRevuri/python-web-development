@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from testapp.models import Employee
 
 # Create your views here.
 # function based views
@@ -38,11 +39,30 @@ def json_view2(request):
 from django.views.generic import View
 
 class EmployeeClassBasedView(View):
-    def get(self, request, *args, **kwargs):
-        print('Get method is called!!!')
-        emp_data = {'msg': 'Your message comes here'}
-        return JsonResponse(emp_data)
     
+    # def get_all(self, request, *args, **kwargs):
+    #     print('Get method is called!!!')
+    #     emp_data = {'msg': 'Congratualations...Your get request has been called!!!'}
+    #     return JsonResponse(emp_data)
+    
+    def get(self, request, *args, **kwargs):
+        obj_data = json.loads(request.body)
+        id = obj_data.get('id', None)
+        try:
+            if id is not None:
+                emp_obj = Employee.objects.get(id=id)
+            else:
+                emp_obj = Employee.objects.all()
+            emp_data = {
+                'eno': emp_obj.eno,
+                'ename': emp_obj.ename,
+                'esal': emp_obj.esal,
+                'eaddress': emp_obj.eaddress
+            }
+        except Employee.DoesNotExist:
+            emp_data = {'msg': "Your requested data isn't available"}
+        return JsonResponse(emp_data)
+        
     def post(self, request, *args, **kwargs):
         print('post method is called!!!')
         emp_data = {'msg': 'Your message comes here'}

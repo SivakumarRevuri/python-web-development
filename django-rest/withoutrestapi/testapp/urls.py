@@ -6,5 +6,5 @@ urlpatterns = [
     path('html/', html_view),
     path('json/', json_view),
     path('json2/', json_view2),
-    path('empclass/', EmployeeClassBasedView.as_view())
+    path('empclass/', EmployeeClassBasedView.as_view()),
 ]
