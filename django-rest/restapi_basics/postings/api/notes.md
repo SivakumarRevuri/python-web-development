@@ -8,3 +8,6 @@
 3. Datatypes & Validation
     - JSON -> Serializer
     - Validation -> Serializer
+
+
+# this module is end-point for all CRUD operations.
