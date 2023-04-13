@@ -1,0 +1,18 @@
+pip install virtualenv
+
+-- create a environment
+virtualenv env-name(django_project)
+eg: virtualenv django_env
+
+-- and make sure you activated the environment.
+
+pip install django
+
+-- check using django-admin command
+
+create a project:
+    django-admin startproject studybud
+
+run the project server:
+    py manage.py runserver
+

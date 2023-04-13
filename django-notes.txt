@@ -1,0 +1,23 @@
+What is Django:
+    1. Django is a light-weight python web framework
+    2. Server side framework
+    3. Designed to get you started fast
+    4. Batteries included
+    5. MVT architectural design pattern
+
+ex: django is similar to ruby on rails
+
+Web framework:
+    Collection of modules, packages and libraries Designed to speed up the development.
+
+For front-end: Django has it's own template engine.
+
+Usage: pinterest, dropbox, instagram, spotify, udemy and youtube etc.
+
+django + django rest framework = Building API's with Django is easy.
+
+
+Other python frameworks:
+    Flask, Cherry Pie, Web2py, Pyramid.
+
+ref: https://docs.djangoproject.com/en/4.2/
