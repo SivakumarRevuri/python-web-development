@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Room
+from .models import Room, Topic
 from .forms import RoomForm
 
 # rooms = [
@@ -11,8 +11,13 @@ from .forms import RoomForm
 
 # Create your views here.
 def home(request):
-    rooms = Room.objects.all()
-    context = {'rooms': rooms}
+    # searching the topics
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    print(q)
+    rooms = Room.objects.filter(topic__name=q)
+    topics = Topic.objects.all()
+    
+    context = {'rooms': rooms, 'topics': topics}
     return render(request, 'base/home.html', context = context)
 
 def hello_world(request):
@@ -41,3 +46,24 @@ def create_room(request):
         
     context = {'form': form}
     return render(request, 'base/room_form.html', context= context)
+
+
+def update_room(request, pk):
+    room = Room.objects.get(id=pk)
+    form = RoomForm(instance=room) # gives you a empty form 
+    
+    if request.method == 'POST':
+        form = RoomForm(request.POST, instance=room)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    
+    return render(request, 'base/room_form.html', context = {'form': form})
+
+
+def delete_room(request, pk):
+    room = Room.objects.get(id = pk)
+    if request.method == 'POST':
+        room.delete()
+        return redirect('home')
+    return render(request, 'base/delete.html', context={'obj': room})
