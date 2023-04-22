@@ -16,3 +16,7 @@ create a project:
 run the project server:
     py manage.py runserver
 
+py manage.py createsuperuser
+name: ravan
+email: sivakumarr96@gmail.com
+password: March@23
