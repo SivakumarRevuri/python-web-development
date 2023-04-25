@@ -1,0 +1,5 @@
+Explain about Meta class?
+Monkey patching and it's usage?
+Django middlewares?
+Request/Response cycle?
+

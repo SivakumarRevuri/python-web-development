@@ -9,6 +9,11 @@ from .forms import RoomForm
 #     {'id': 4, 'name': 'Lets learn MongoDB'},
 # ]
 
+
+def login_page(request):
+    return render(request, 'base/login_register.html', context= {})
+
+
 # Create your views here.
 def home(request):
     # searching the topics
