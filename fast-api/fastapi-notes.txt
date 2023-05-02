@@ -1,0 +1,10 @@
+FastAPI:
+
+Advantages:
+	1. Auto Documentation
+	2. Auto Completion and code suggestions
+
+installation:
+	pip install fastapi
+	pip install uvicorn
+
