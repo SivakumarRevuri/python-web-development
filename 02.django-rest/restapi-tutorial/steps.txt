@@ -1,0 +1,20 @@
+create a workspace
+add your dependencies to requrements.txt file
+And install them
+now create 2 diff folders, for backend and another for client
+Navigate to backend, and create a django-project ex: django-admin startproject prj_name
+
+Now, Creating a Python API client.
+
+
+
+
+
+
+
+
+
+
+
+Note:
+    1. check ==> https://httpbin.org
