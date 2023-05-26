@@ -15,6 +15,7 @@ env/
 
 # Database
 db.sqlite3
+eastvantage.db
 
 # macOS
 ._*
