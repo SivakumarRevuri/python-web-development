@@ -34,6 +34,7 @@ def test3():
         b = request.json['kumar']
         result = a + b
         return jsonify(str(result))
+
 from flask import Flask,request, jsonify
 
 app= Flask(__name__)
